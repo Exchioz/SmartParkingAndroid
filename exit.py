@@ -123,7 +123,7 @@ def preprocess_image(image_path):
 
     return img_array
 
-#prediksi karakter pada contour
+#prediksi karakter pada kontur
 def predict_char(img_array):
     char_list = list(class_names)
     predictions = model.predict(img_array)
@@ -149,7 +149,7 @@ def segment_characters(image_path):
     for idx, contour_plate in enumerate(contours_plate):
         x, y, w, h = cv2.boundingRect(contour_plate)
 
-        if h >= 20 and h <= 50 and w >= 20 and w<= 50:
+        if h >= 20 and h <= 50 and w >= 20 and w<= 50: #can adjust the value
             index_chars_candidate.append(idx)
 
     if not index_chars_candidate:
