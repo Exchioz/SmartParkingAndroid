@@ -1,4 +1,0 @@
-ultralytics==8.2.45
-tensorflow==2.16.1
-gpiozero==1.78
-onnx==1.16.1
